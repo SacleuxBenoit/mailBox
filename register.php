@@ -11,7 +11,7 @@ include('pass.php') // Get the password for the database
     <title>Register</title>
 </head>
 <body>
-    <form action="#" method="post">
+    <form action="./database/user_info_database.php" method="post">
 
         <p>
             <label for="firstName">First name :</label>
@@ -44,17 +44,5 @@ include('pass.php') // Get the password for the database
 
     <p>If you already have an account <a href="login.php">click here</a></p>
 
-
-    <?php 
-        try
-        {
-            $bdd = new PDO('mysql:host=localhost;dbname=mailBox;charset=utf8', 'root', $_SESSION['pass']);
-            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        }
-        catch(Exception $e)
-        {
-                die('Erreur : '.$e->getMessage());
-        }
-    ?>
 </body>
 </html>
