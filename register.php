@@ -35,7 +35,7 @@ include('pass.php') // Get the password for the database
 
         <p>
             <label for="confirmPass">Confirm your password</label>
-            <input type="email" id="confirmPass" name="confirmPass">
+            <input type="password" id="confirmPass" name="confirmPass">
         </p>
 
         <input type="submit" value="Submit">
