@@ -39,7 +39,22 @@ include('pass.php') // Get the password for the database
         </p>
 
         <input type="submit" value="Submit">
-         
+
     </form>
+
+    <p>If you already have an account <a href="login.php">click here</a></p>
+
+
+    <?php 
+        try
+        {
+            $bdd = new PDO('mysql:host=localhost;dbname=mailBox;charset=utf8', 'root', $_SESSION['pass']);
+            $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        }
+        catch(Exception $e)
+        {
+                die('Erreur : '.$e->getMessage());
+        }
+    ?>
 </body>
 </html>
