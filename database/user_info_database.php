@@ -12,17 +12,20 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-
-
-    if($_POST['pass'] != $_POST['confirmPass']){
+    if(empty($_POST['lastName']) || empty($_POST['firstName']) || empty($_POST['email']) || empty($_POST['pass'])){
         header('Location: ../register.php');
-    }else{
-        $send_info = $bdd->prepare('INSERT INTO register(lastname, firstname, email, pass) VALUES(:lastname, :firstname, :email, :pass)');
-        $send_info->bindParam(':lastname', $_POST['lastName']);
-        $send_info->bindParam(':firstname', $_POST['firstName']);
-        $send_info->bindParam(':email', $_POST['email']);
-        $send_info->bindParam(':pass', $_POST['pass']);
-        $send_info->execute();
-        $send_info->closeCursor();
     }
+    else{
+            $send_info = $bdd->prepare('INSERT INTO register(lastname, firstname, email, pass) VALUES(:lastname, :firstname, :email, :pass)');
+            $send_info->bindParam(':lastname', $_POST['lastName']);
+            $send_info->bindParam(':firstname', $_POST['firstName']);
+            $send_info->bindParam(':email', $_POST['email']);
+            $send_info->bindParam(':pass', $_POST['pass']);
+            $send_info->execute();
+            $send_info->closeCursor();
+        }
+        
+        if($_POST['pass'] != $_POST['confirmPass']){
+            header('Location: ../register.php');
+        }
 ?>
