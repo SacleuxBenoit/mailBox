@@ -16,15 +16,19 @@ catch(Exception $e)
         header('Location: ../register.php');
     }
     else{
+        $pass_hash = password_hash($_POST['pass'], PASSWORD_DEFAULT);   
+
             $send_info = $bdd->prepare('INSERT INTO register(lastname, firstname, email, pass) VALUES(:lastname, :firstname, :email, :pass)');
             $send_info->bindParam(':lastname', $_POST['lastName']);
             $send_info->bindParam(':firstname', $_POST['firstName']);
             $send_info->bindParam(':email', $_POST['email']);
-            $send_info->bindParam(':pass', $_POST['pass']);
+            $send_info->bindParam(':pass', $pass_hash);
             $send_info->execute();
             $send_info->closeCursor();
+
+            header('Location: ../home.php');
         }
-        
+
         if($_POST['pass'] != $_POST['confirmPass']){
             header('Location: ../register.php');
         }
