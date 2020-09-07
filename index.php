@@ -8,16 +8,19 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="grid-container">
 
-        <div class="titleHeader">
-            <h1>MailBox</h1>
-        </div>
+    <div class="grid-container">
+        
+        <header> 
+            <div class="titleHeader">
+                <h1>MailBox</h1>
+            </div>
+        </header>
 
         <div class="headerList">
             <ul>
-                <li><a href="#">Register</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.php">Login</a></li>
             </ul>
         </div>
 
