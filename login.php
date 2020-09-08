@@ -13,7 +13,7 @@ include('pass.php');
 <body>
     <h1>Login</h1>
 
-    <form action="home.php" method="post">
+    <form action="./database/user_login_database.php" method="post">
         <p>
             <label for="loginEmail">Email :</label>
             <input type="text" id="loginEmail" name="loginEmail">
