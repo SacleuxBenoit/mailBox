@@ -1,31 +1,17 @@
-.titleHeader { grid-area: titleHeader; }
-
-.article1 { grid-area: article1; }
-
-.article2 { grid-area: article2; }
-
-
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'titleHeader titleHeader titleHeader titleHeader titleHeader headerList'
-    'article1 article1 article1 article1 article1 article1'
-    'article2 article2 article2 article2 article2 article2';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+header{
+  border : 1px solid black;
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
+.titleHeader{
   text-align: center;
-  padding : 2rem 2rem;
-
 }
 
-ul, li{
+ul{
+  text-align: right;
+}
+li{
     list-style:none;
     font-size: 1.2rem;
-    float: article3;
+    display: inline;
+    padding-left: 2rem;
 }
