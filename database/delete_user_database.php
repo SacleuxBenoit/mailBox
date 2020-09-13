@@ -23,6 +23,8 @@ if($_POST['deleteEmail'] == $donnees['email'] && password_verify($_POST["deleteP
     $delete_account->execute();
     echo "Your account is now deleted";
 }else{
-    echo "The email address and the password doesn't match.";
+    ?>
+        <p>The email address and the password doesn't match. <a href="../deleteAccount.php">Click here</a> for a redirection to the delete page</p>
+    <?php
 }
 ?>
