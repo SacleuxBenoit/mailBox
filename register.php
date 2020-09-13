@@ -12,6 +12,9 @@ include('pass.php') // Get the password for the database
     <title>Register</title>
 </head>
 <body>
+    <?php
+        include('Components/header.php')
+    ?>
     <form action="./database/user_info_database.php" method="post">
 
         <p>

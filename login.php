@@ -12,6 +12,10 @@ include('pass.php');
 <title>Document</title>
 </head>
 <body>
+    <?php
+        include('Components/header.php')
+    ?>
+    
     <h1>Login</h1>
 
     <form action="./database/user_login_database.php" method="post">
