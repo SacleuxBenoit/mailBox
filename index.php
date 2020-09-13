@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-
+    <?php
+        include('Components/header.php');
+    ?>
 </body>
 </html>
