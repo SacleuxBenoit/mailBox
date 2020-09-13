@@ -12,7 +12,7 @@ include('pass.php')
 </head>
 <body>
 
-    <form action="#" method="post">
+    <form action="./database/delete_user_database.php" method="post">
         <p>
             <label for="deleteEmail">Email :</label>
             <input type="text" id="deleteEmail" name="deleteEmail">
