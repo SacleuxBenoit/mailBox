@@ -11,5 +11,20 @@
     <?php
         include('../Components/header.php');
     ?>
+        <h1>Enter your login details</h1>
+
+        <form action="#" method="post">
+        <p>
+            <label for="settingsEmail">Email :</label>
+            <input type="email" id="settingsEmail" name="settingsEmail">
+        </p>
+
+        <p>
+            <label for="settingsPass">Password :</label>
+            <input type="password" id="settingsPass" name="settingsPass">
+        </p>
+
+            <input type="submit" value="Submit">
+        </form>
 </body>
 </html>
