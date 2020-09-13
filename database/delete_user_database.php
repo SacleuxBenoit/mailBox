@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('pass.php');
+include('../pass.php');
 
 try
 {
@@ -12,5 +12,14 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
+$get_email_pass = $bdd->prepare('SELECT email,pass FROM register where email = :email');
+$get_email_pass->bindParam(':email', $_POST['deleteEmail']);
+$get_email_pass->execute();
+$donnees = $get_email_pass->fetch();
 
+if($_POST['deleteEmail'] == $donnees['email'] && password_verify($_POST["deletePass"],$donnees['pass'])){
+    echo "Your account is now deleted";
+}else{
+    echo "The email address and the password doesn't match.";
+}
 ?>
