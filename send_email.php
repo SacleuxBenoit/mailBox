@@ -12,7 +12,7 @@
         include('Components/header.php')
     ?>
 
-    <form action="send_email_database.php" method="post">
+    <form action="database/send_email_database.php" method="post">
         <p>
             <label for="user">To :</label>
             <input type="email" name="user" id="user">
