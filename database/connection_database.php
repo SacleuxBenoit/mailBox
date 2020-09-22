@@ -1,4 +1,5 @@
 <?php
+include('../pass.php');
 try
 {
     $bdd = new PDO('mysql:host=localhost;dbname=mailBox;charset=utf8', 'root', $_SESSION['pass']);

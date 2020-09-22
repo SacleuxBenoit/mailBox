@@ -1,6 +1,5 @@
 <?php
 session_start();
-include('../pass.php');
 include('connection_database.php');
 
 
