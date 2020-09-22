@@ -1,16 +1,8 @@
 <?php
 session_start();
 include('../pass.php');
+include('connection_database.php');
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=mailBox;charset=utf8', 'root', $_SESSION['pass']);
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
 
 $get_email_pass = $bdd->prepare('SELECT email,pass FROM register where email = :email');
 $get_email_pass->bindParam(':email', $_POST['deleteEmail']);
