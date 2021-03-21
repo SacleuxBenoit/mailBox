@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('connection_database.php');
+include('../connection_database.php');
 
 
 $get_email_pass = $bdd->prepare('SELECT email,pass FROM register where email = :email');
