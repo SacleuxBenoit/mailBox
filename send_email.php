@@ -24,8 +24,8 @@
         </p>
 
         <p>
-            <label for="message">Your message :</label>
-            <input type="text" name="message" id="message">
+            <label for="contentEmail">Your message :</label>
+            <input type="text" name="contentEmail" id="contentEmail">
         </p>
 
         <input type="submit" value="Submit">
