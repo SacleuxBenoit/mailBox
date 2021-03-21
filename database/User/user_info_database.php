@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('connection_database.php');
+include('../connection_database.php');
 
     if($_POST['pass'] != $_POST['confirmPass']){
         header('Location: ../register.php');
@@ -14,7 +14,7 @@ include('connection_database.php');
     // verify if an input is empty
 
     if(empty($_POST['lastName']) || empty($_POST['firstName']) || empty($_POST['email']) || empty($_POST['pass'])){
-        header('Location: ../register.php');
+        header('Location: ../../layouts/register.php');
     }
     
     // verify if the email address is already taken
@@ -36,6 +36,6 @@ include('connection_database.php');
         $send_info->execute();
         $send_info->closeCursor();
 
-        header('Location: ../home.php');
+        header('Location: ../../layouts/home.php');
     }
 ?>
