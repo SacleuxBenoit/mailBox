@@ -17,7 +17,7 @@ include('../pass.php')
         include('../Components/header.php')
     ?>
 
-    <form action="./database/delete_user_database.php" method="post">
+    <form action="../database/delete_user_database.php" method="post">
         <p>
             <label for="deleteEmail">Email :</label>
             <input type="text" id="deleteEmail" name="deleteEmail">

@@ -15,7 +15,7 @@ include('../pass.php')
     <?php
         include('../Components/header.php')
     ?>
-    <form action="./database/user_info_database.php" method="post">
+    <form action="../database/user_info_database.php" method="post">
 
         <p>
             <label for="firstName">First name :</label>
