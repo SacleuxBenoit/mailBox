@@ -6,12 +6,16 @@ header{
   text-align: center;
 }
 
-ul{
+.ulHeader{
   text-align: right;
 }
-li{
-    list-style:none;
+
+.liHeader{
     font-size: 1.2rem;
     display: inline;
     padding-left: 2rem;
+}
+
+li{
+  list-style-type:none;
 }
