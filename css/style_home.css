@@ -1,0 +1,15 @@
+body{
+    display: grid;
+    grid-template-areas:
+    'header header header header header'
+    'navLeft . content content .';
+}
+
+header{
+    grid-area: header;
+}
+.navLeft{
+    grid-area: navLeft;
+    border: 1px solid black;
+    border-top: none;
+}
