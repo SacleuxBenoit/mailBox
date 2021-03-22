@@ -14,6 +14,6 @@ $_SESSION['lastName'] = $donnees['lastName'];
 if($_POST['loginEmail'] == $donnees['email'] && password_verify($_POST["loginPass"],$donnees['pass'])){
     header('Location: ../../layouts/home.php');
 }else{
-    header('Location: ../../login.php');
+    header('Location: ../../layouts/User/login.php');
 }
 ?>

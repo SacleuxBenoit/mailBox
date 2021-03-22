@@ -3,7 +3,7 @@ session_start();
 include('../connection_database.php');
 
     if($_POST['pass'] != $_POST['confirmPass']){
-        header('Location: ../register.php');
+        header('Location: ../../layouts/User/register.php');
     }
     
     $verif_email = $bdd->prepare('SELECT email FROM register WHERE email = :email');
@@ -14,7 +14,7 @@ include('../connection_database.php');
     // verify if an input is empty
 
     if(empty($_POST['lastName']) || empty($_POST['firstName']) || empty($_POST['email']) || empty($_POST['pass'])){
-        header('Location: ../../layouts/register.php');
+        header('Location: ../../layouts/User/register.php');
     }
     
     // verify if the email address is already taken
